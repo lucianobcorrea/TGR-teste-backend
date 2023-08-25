@@ -11,14 +11,14 @@ class ProdutoController extends Controller
     {
         $produtos = Produto::all();
 
-        return view('site.principal', ['produtos' => $produtos]);
+        return $produtos;
     }
 
     public function buscar($nome)
     {
         $produtos = Produto::whereRaw('LOWER(nome) LIKE ?', ['%' . strtolower($nome) . '%'])->get();
 
-        return view('site.principal', ['produtos' => $produtos]);
+        return response()->json(['produtos' => $produtos]);
     }
 
     public function detalhar(Produto $produto)

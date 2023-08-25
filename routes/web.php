@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+
+Route::get('/', 'PrincipalController@principal')->name('site.principal');
+
 Route::prefix('/produto')->group(function () {
     Route::get('/listar', 'ProdutoController@listar')->name('produto.listar');
     Route::get('/buscar/{nome}', 'ProdutoController@buscar');

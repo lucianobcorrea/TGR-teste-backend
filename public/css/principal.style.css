@@ -8,6 +8,12 @@
     flex-direction: column;
 }
 
+.card-price-quantity p:first-child {
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(245, 118, 0);
+}
+
 .cards-container {
     display: flex;
     justify-content: center;

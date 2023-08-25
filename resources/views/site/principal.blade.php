@@ -16,7 +16,7 @@
     <nav class="navbar navbar-custom-color">
         <div class="container-fluid">
             <div class="container">
-                <a class="navbar-brand" href="{{route('produto.listar')}}">
+                <a class="navbar-brand" href="{{ route('produto.listar') }}">
                     <img src="{{ asset('img/logo.png') }}" alt="Logo" width="120" height="30"
                         class="d-inline-block align-text-top">
                 </a>
