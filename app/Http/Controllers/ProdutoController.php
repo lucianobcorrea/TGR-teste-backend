@@ -1,0 +1,59 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Produto;
+use Illuminate\Http\Request;
+
+class ProdutoController extends Controller
+{
+    public function listar()
+    {
+        $produtos = Produto::all();
+
+        return view('site.principal', ['produtos' => $produtos]);
+    }
+
+    public function buscar($nome)
+    {
+        $produtos = Produto::whereRaw('LOWER(nome) LIKE ?', ['%' . strtolower($nome) . '%'])->get();
+
+        return view('site.principal', ['produtos' => $produtos]);
+    }
+
+    public function detalhar(Produto $produto)
+    {
+        $produto = Produto::find($produto);
+
+        return view('site.principal', ['produto' => $produto]);
+    }
+
+    public function criar(Request $request)
+    {
+        $request->validate([
+            'nome' => 'min:3|max:100',
+            'preco' => 'required|gt:0',
+            'quantidade' => 'required|gt:0'
+        ]);
+
+        Produto::create($request->all());
+    }
+
+    public function atualizar(Request $request, Produto $produto)
+    {
+        $request->validate([
+            'nome' => 'min:3|max:100',
+            'preco' => 'required|gt:0',
+            'quantidade' => 'required|gt:0'
+        ]);
+
+        $produto = Produto::find($produto);
+
+        $produto->update($request->all());
+    }
+
+    public function excluir(Produto $produto)
+    {
+        $produto->delete();
+    }
+}

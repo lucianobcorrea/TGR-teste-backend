@@ -1,0 +1,35 @@
+.custom-background {
+    background: #17154c;
+}
+
+.card-price-quantity {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.delete-button-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.delete-button-container button {
+    margin-bottom: 20px;
+}
+
+.navbar-custom-color {
+    background-color: #1d1953;
+}
+
+.container-fluid {
+    padding: 20px;
+}
