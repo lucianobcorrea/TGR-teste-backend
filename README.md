@@ -7,18 +7,18 @@ Dentro da raíz do projeto em uma pasta chamada "postman", se encontra o arquivo
 
 ## Telas da aplicação
 
-# Início
+### Início
 
 Está tela representa a home da aplicação, a qual é responsável pela listagem de todos os produtos cadastrados, sendo possível excluir 
 algum selecionado, apresentando uma mensagem de confirmação
 
 <img src="/public/img/inicio.png" alt="tela inicial da aplicação com a listagem de produtos"/>
 
-# Cadastro de Produtos
-
-<img src="/public/img/cadastrar-produtos.png" alt="tela inicial da aplicação com a listagem de produtos"/>
+### Cadastro de Produtos
 
 Está tela representa o cadastro de produtos
+
+<img src="/public/img/cadastrar-produtos.png" alt="tela inicial da aplicação com a listagem de produtos"/>
 
 ## Documentação da API
 
