@@ -19,6 +19,7 @@
     justify-content: center;
     gap: 60px;
     margin-top: 40px;
+    margin-bottom: 40px;
     flex-wrap: wrap;
 }
 
@@ -38,4 +39,15 @@
 
 .container-fluid {
     padding: 20px;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: bold !important;
+}
+
+.header-space-between-items {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
 }

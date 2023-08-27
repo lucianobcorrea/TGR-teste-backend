@@ -13,16 +13,30 @@
 </head>
 
 <body class="custom-background">
-    <nav class="navbar navbar-custom-color">
-        <div class="container-fluid">
-            <div class="container">
-                <a class="navbar-brand" href="{{ route('produto.listar') }}">
-                    <img src="{{ asset('img/logo.png') }}" alt="Logo" width="120" height="30"
-                        class="d-inline-block align-text-top">
-                </a>
+
+    <nav class="navbar navbar-expand-lg navbar-custom-color">
+        <div class="container-fluid container">
+            <a class="navbar-brand" href="{{ route('site.principal') }}">
+                <img src="{{ asset('img/logo.png') }}" alt="Logo" width="120" height="30"
+                    class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse header-space-between-items" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ route('site.principal') }}">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('site.cadastrar-produto') }}">Cadastrar Produto</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
+
     <div class="container">
         <div class="cards-container">
             @foreach ($produtos as $produto)
@@ -30,14 +44,13 @@
                     <div class="card-body">
                         <div class="delete-button-container">
                             <h5 class="card-title">{{ $produto->nome }}</h5>
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal_{{ $produto->id }}">
-                                Excluir
-                            </button>
+                            <button type="button" class="btn-close" aria-label="Close" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal_{{ $produto->id }}"></button>
                         </div>
-                        <p class="card-text">{{ $produto->descricao }}</p>
+                        <p class="card-text">{{ $produto->descricao }}
+                        </p>
                         <div class="card-price-quantity">
-                            <p><b>Preço:</b> {{ $produto->preco }}R$</p>
+                            <p>{{ $produto->preco }}R$</p>
                             <p><b>Quantidade:</b> {{ $produto->quantidade }}Un.</p>
                         </div>
                     </div>

@@ -1,0 +1,42 @@
+.form-items {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    min-width: 400px;
+}
+
+.form-items input {
+    padding: 7px;
+    border-radius: 10px;
+    border: none;
+}
+
+.form-items input:focus {
+    outline: none;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-custom-color {
+    background-color: rgb(255, 111, 0) !important;
+    color: white !important;
+}
+
+.btn-custom-color:hover {
+    background-color: rgb(205, 89, 0) !important;
+}
+
+.form-items button {
+    margin-top: 10px;
+}
+
+.error-container {
+    color: red;
+    margin-top: 10px;
+}

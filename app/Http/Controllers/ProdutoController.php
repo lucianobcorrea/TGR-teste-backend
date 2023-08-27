@@ -28,15 +28,20 @@ class ProdutoController extends Controller
         return view('site.principal', ['produto' => $produto]);
     }
 
-    public function criar(Request $request)
+    public function cadastrar(Request $request)
     {
         $request->validate([
             'nome' => 'min:3|max:100',
+            'descricao' => 'min:3|max:512',
             'preco' => 'required|gt:0',
             'quantidade' => 'required|gt:0'
         ]);
 
         Produto::create($request->all());
+    }
+
+    public function cadastrarProdutoView() {
+        return view('site.cadastrar-produto');
     }
 
     public function atualizar(Request $request, Produto $produto)
