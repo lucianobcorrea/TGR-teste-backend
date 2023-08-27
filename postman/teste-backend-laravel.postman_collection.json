@@ -1,0 +1,293 @@
+{
+	"info": {
+		"_postman_id": "1ff8d4d0-6dda-4d6c-b53d-62b204ad3637",
+		"name": "teste-backend-laravel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25753119"
+	},
+	"item": [
+		{
+			"name": "Cadastrar Produto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "Mouse",
+							"type": "text"
+						},
+						{
+							"key": "descricao",
+							"value": "É um dispositivo de mão que controla o movimento de um ponteiro na tela (normalmente a imagem de uma seta)",
+							"type": "text"
+						},
+						{
+							"key": "preco",
+							"value": "199.99",
+							"type": "text"
+						},
+						{
+							"key": "quantidade",
+							"value": "100",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/produto/cadastrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"produto",
+						"cadastrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detalhar Produto",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "vvbbb",
+							"type": "text"
+						},
+						{
+							"key": "descricao",
+							"value": "É um dispositivo de mão que controla o movimento de um ponteiro na tela (normalmente a imagem de uma seta)",
+							"type": "text"
+						},
+						{
+							"key": "preco",
+							"value": "199.99",
+							"type": "text"
+						},
+						{
+							"key": "quantidade",
+							"value": "100",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/produto/detalhes/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"produto",
+						"detalhes",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Produtos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "vvbbb",
+							"type": "text"
+						},
+						{
+							"key": "descricao",
+							"value": "É um dispositivo de mão que controla o movimento de um ponteiro na tela (normalmente a imagem de uma seta)",
+							"type": "text"
+						},
+						{
+							"key": "preco",
+							"value": "199.99",
+							"type": "text"
+						},
+						{
+							"key": "quantidade",
+							"value": "100",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/produto/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"produto",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Produto",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "vvbbb",
+							"type": "text"
+						},
+						{
+							"key": "descricao",
+							"value": "É um dispositivo de mão que controla o movimento de um ponteiro na tela (normalmente a imagem de uma seta)",
+							"type": "text"
+						},
+						{
+							"key": "preco",
+							"value": "199.99",
+							"type": "text"
+						},
+						{
+							"key": "quantidade",
+							"value": "100",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/produto/buscar/mouse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"produto",
+						"buscar",
+						"mouse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Produto",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "Este produto foi alterado",
+							"type": "text"
+						},
+						{
+							"key": "descricao",
+							"value": "teste de descrição atualizada",
+							"type": "text"
+						},
+						{
+							"key": "quantidade",
+							"value": "99",
+							"type": "text"
+						},
+						{
+							"key": "preco",
+							"value": "200",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/produto/atualizar/23",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"produto",
+						"atualizar",
+						"23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Produto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "Este produto foi alterado",
+							"type": "text"
+						},
+						{
+							"key": "descricao",
+							"value": "É um dispositivo de mão que controla o movimento de um ponteiro na tela (normalmente a imagem de uma seta)",
+							"type": "text"
+						},
+						{
+							"key": "quantidade",
+							"value": "99",
+							"type": "text"
+						},
+						{
+							"key": "preco",
+							"value": "200",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/produto/excluir/21",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"produto",
+						"excluir",
+						"21"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
