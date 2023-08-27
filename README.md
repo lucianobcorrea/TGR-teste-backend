@@ -1,4 +1,25 @@
 
+## Arquivo Postman
+
+Dentro da raíz do projeto em uma pasta chamada "postman", se encontra o arquivo `JSON` com todas as rotas criadas no aplicativo Postman para poderem ser testadas previamente
+
+- Para tudo funcionar corretamente, é necessário primeiro rodar o comando `php artisan migrate` para a tabela `produtos` ser criada corretamente no banco `MySQL`
+
+## Telas da aplicação
+
+#Início
+
+Está tela representa a home da aplicação, a qual é responsável pela listagem de todos os produtos cadastrados, sendo possível excluir 
+algum selecionado, apresentando uma mensagem de confirmação
+
+<img src="/public/img/inicio.png" alt="tela inicial da aplicação com a listagem de produtos"/>
+
+#Cadastro de Produtos
+
+<img src="/public/img/cadastrar-produtos.png" alt="tela inicial da aplicação com a listagem de produtos"/>
+
+Está tela representa o cadastro de produtos
+
 ## Documentação da API
 
 #### Retorna todos os itens
