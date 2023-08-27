@@ -8,12 +8,22 @@
 }
 
 .form-items input {
-    padding: 7px;
+    padding: 8px 20px;
     border-radius: 10px;
     border: none;
 }
 
 .form-items input:focus {
+    outline: none;
+}
+
+.form-items textarea {
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+.form-items textarea:focus {
     outline: none;
 }
 
