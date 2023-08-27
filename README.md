@@ -99,7 +99,7 @@ Para cadastrar um novo produto, é necessário passar no corpo da requisição o
 - `{o que deseja buscar}` deve ser substituído por algum nome de produto previamente cadastrado, por exemplo, se desejarmos buscar por "mouse", podemos buscar de diversas formas diferentes, como:
 - Mouse;
 - mo;
-- MoUs;
+- MoUs;</br>
 Essa consulta também retorna um JSON com os detalhes do produto pesquisado.
 
 #### Atualizar um produto específico
