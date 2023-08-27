@@ -23,8 +23,6 @@ class ProdutoController extends Controller
 
     public function detalhar(Produto $produto)
     {
-        $produto = Produto::find($produto);
-
         return response()->json(['produto' => $produto]);
     }
 
