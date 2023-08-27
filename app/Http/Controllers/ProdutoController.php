@@ -25,7 +25,7 @@ class ProdutoController extends Controller
     {
         $produto = Produto::find($produto);
 
-        return view('site.principal', ['produto' => $produto]);
+        return response()->json(['produto' => $produto]);
     }
 
     public function cadastrar(Request $request)
@@ -51,8 +51,6 @@ class ProdutoController extends Controller
             'preco' => 'required|gt:0',
             'quantidade' => 'required|gt:0'
         ]);
-
-        $produto = Produto::find($produto);
 
         $produto->update($request->all());
     }
